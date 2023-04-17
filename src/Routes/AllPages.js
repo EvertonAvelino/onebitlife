@@ -1,17 +1,15 @@
-import React from 'react';
-import { View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native'
-import { CreateNativeStackNavigator } from '@react-navigation/native-stack'
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Start from '../Pages/Start';
 
-const Stack = CreateNativeStackNavigator();
+const Stack = createNativeStackNavigator()
 
 export default function AllPages() {
 	return (
 		<NavigationContainer>
 			<Stack.Navigator
-				ScreeOptions={{
+				screenOptions={{
 					headerShown: false,
 				}}
 			>
@@ -20,3 +18,4 @@ export default function AllPages() {
 		</NavigationContainer>
 	);
 }
+
