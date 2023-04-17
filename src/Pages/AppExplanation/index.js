@@ -3,6 +3,7 @@ import { View, StyleSheet, ScrollView, Text } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 
 import DefaultButton from '../../Components/Common/DefaultButton';
+import ExplanationCard from "../../Components/Explanation/ExplanationCard";
 
 
 
@@ -20,12 +21,13 @@ export default function AppExplanation() {
 					<Text style={styles.title}>
 						Antes, deixa {"\n"} eu te explicar...
 					</Text>
-					<Text style={styles.description}>
-						Pronto para subir de nivel na vida?
+					<ExplanationCard />
+					<Text style={styles.descriptionCta}>
+						Pronto(a) para subir de nível na vida?
 					</Text>
 					<Text style={styles.description}>
-						Na proxima tela você vai poder escolher {"\n"} seus 4 habitos
-						de forma individual.
+						Na próxima tela você vai poder escolher {"\n"} seus 4 hábitos de
+						forma individual.
 					</Text>
 					<DefaultButton
 						buttonText={"Continuar"}
@@ -38,6 +40,7 @@ export default function AppExplanation() {
 		</View>
 	);
 }
+
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
@@ -63,3 +66,4 @@ const styles = StyleSheet.create({
 		marginBottom: 30,
 	},
 });
+
